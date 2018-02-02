@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Olga Site</title>
+        <meta name="author" content="Olga">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="static/css/main.css">
+    </head>
+    <body>
+        <nav class="nav-container">
+            <ul class="nav-menu">
+                <li>HOME</li>
+                <li>STORE</li>
+                <li>PAINTINGS</li>
+                <li>MIXED MEDIA</li>
+                <li>SKETCHBOOK</li>
+                <li>ABOUT</li>
+                <li>CONTACT</li>
+            </ul>
+        </nav>
+
+        <h1 class="page-title">OLGA MARIE ANASTASIA ART</h1>
+        <button name="changebg-button" id="bg-button">Change Background</button>
+
+        <script type="text/javascript">
+            var bg_images = ["static/img/gold_face.jpg"
+                            ,"static/img/tile.jpeg"
+                            ,"static/img/torso.jpeg"
+                            ,"static/img/clown.jpeg"];
+            var img_num = 0;
+            function changeBackgroundImage(images, number) {
+                elem = document.getElementsByTagName("html")[0];
+                elem.setAttribute("style", "background-image: url(" + images[number] + ")");
+            }
+            function cycle() {
+                img_num = (img_num + 1) % bg_images.length;
+                changeBackgroundImage(bg_images, img_num);
+            }
+            
+            btn = document.getElementById("bg-button");
+            btn.addEventListener("click", cycle);
+        </script>
+    </body>
+</html>
