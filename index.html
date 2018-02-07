@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="background">
-            <div class="slideshow" id="slide1" src="#"></div>
+            <div class="slideshow" id="slide1"></div>
         </div>
 
         <div class="page-content">
@@ -19,32 +19,27 @@
                 <ul class="nav-menu">
                     <li>HOME</li>
                     <li>STORE</li>
-                    <li>PAINTINGS</li>
-                    <li>MIXED MEDIA</li>
-                    <li>SKETCHBOOK</li>
                     <li>ABOUT</li>
-                    <li>CONTACT</li>
                 </ul>
             </nav>
 
-            <div id="button-test">
-                <button name="change-background" id="btn_next-slide" class="btn-purple">
-                    Change Background
-                </button>
-                <button name="toggle-headers" id="btn_toggle-headers" class="btn-purple">
-                    Show/Hide Headers
-                </button>
-            </div>
+            <img class="logo" id="main-logo" src="static/img/olga-art-logo.png">
+            <nav class="nav-container">
+                <ul class="nav-menu">
+                    <li>MIXED MEDIA</li>
+                    <li>WATERCOLOR</li>
+                    <li>INK</li>
+                    <li>SKETCHBOOK</li>
+                </ul>
+            </nav>
 
-            <h1 class="banner" id="main-banner">OLGA MARIE ANASTASIA ART</h1>
-
-            <div class="banner-test" id="test-banner">
-                <span id="name">
-                    <div id="first-name">OLGA</div>
-                    <div id="last-name">ANASTASIA</div>
-                </span>
-                <span id="brand">ART</span>
-            </div>
+        <div id="button-test">
+            <button name="change-background" id="btn_next-slide" class="btn-purple">
+                Change Background
+            </button>
+            <button name="toggle-headers" id="btn_toggle-headers" class="btn-purple">
+                Show/Hide Headers
+            </button>
         </div>
 
         <script type="text/javascript">
@@ -54,7 +49,7 @@
                             ,"static/img/clown.jpeg"];
             var current_slide = 0;
             var slide_id = "slide1";
-            var banner_ids = ["main-banner", "test-banner"];
+            var banner_ids = ["main-logo"];
 
             function changeBackgroundImage(id, images, index) {
                 elem = document.getElementById(id);

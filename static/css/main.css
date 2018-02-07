@@ -12,20 +12,29 @@ body {
   padding: 0; }
 
 .background {
+  margin: 0;
+  padding: 0;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -10; }
+  z-index: -10;
+  background-image: url("../img/leafy-wall.jpg");
+  background-attachment: fixed;
+  background-size: cover; }
 
 .slideshow {
+  margin: 0;
+  padding: 0;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
+  top: 2.5em;
+  bottom: 2.5em;
+  left: 2.5%;
+  right: 2.5%;
+  z-index: -5;
   background-attachment: fixed;
-  z-index: -5; }
+  background-size: cover; }
 
 #slide1 {
   background-image: url("../img/gold_face.jpg"); }
@@ -34,13 +43,9 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center;
   flex-flow: column nowrap;
   font-family: 'Roboto', sans-serif; }
-
-.banner {
-  font-size: 3em;
-  color: white;
-  text-shadow: 2px 2px 4px black, 1px 1px 2px black; }
 
 .nav-menu {
   margin: .75em 0em;
@@ -54,11 +59,19 @@ body {
   list-style-type: "";
   text-shadow: 2px 2px 1px black, -1px -1px 2px black; }
   .nav-menu > li {
-    margin: 0em .5em;
+    margin: 0em 3.5em;
+    font-size: 1.5em;
     border-bottom: 4px solid rgba(255, 255, 255, 0);
-    transition: border-bottom .25s ease-in; }
+    transition: border-bottom .1s ease-out; }
   .nav-menu > li:hover {
     border-bottom: 4px solid white; }
+
+.logo {
+  margin: 0em 2.5em 0em 2.5em;
+  max-width: 90%;
+  min-width: 300px;
+  width: 40em;
+  align-self: center; }
 
 #btn_next-slide {
   margin: 1em 2em;
@@ -83,27 +96,9 @@ body {
   display: flex;
   flex-flow: row nowrap; }
 
-.banner-test {
-  display: flex;
-  flex-flow: row wrap;
-  margin: 0;
-  padding: 0;
-  color: white;
-  font-weight: 900;
-  text-shadow: 2px 2px 4px black, 1px 1px 2px black; }
-  .banner-test #name {
-    display: flex;
-    flex-flow: column nowrap;
-    margin: 0em .5em 0em 2em; }
-    .banner-test #name #first-name {
-      font-size: 7em;
-      height: 1em; }
-    .banner-test #name #last-name {
-      font-size: 3.25em;
-      height: 1em; }
-  .banner-test #brand {
-    font-size: 12em;
-    height: 1em;
-    line-height: 1em; }
+@media (max-width: 740px) {
+  .slideshow {
+    left: 0;
+    right: 0; } }
 
 /*# sourceMappingURL=main.css.map */
