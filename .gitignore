@@ -1,4 +1,6 @@
 **/.DS_Store
-**/.sw?
+**/*.sw?
 **/*.css.map
 .sass-cache/
+venv/
+bucket/
