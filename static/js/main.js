@@ -20,34 +20,37 @@ controls.forEach(svg => svg.addEventListener("click",
 
 posters =  [{ 
                 "selector": "#mixed-media",
-                "enter_event": () => changeBackgroundImage("bucket/mixed_media-thumbnail.JPG"),
-                "leave_event": () => changeBackgroundImage("bucket/background.JPG")
+                "enter_event": () => changeBackgroundImage("static/img/mixed_media-background.JPG"),
+                "leave_event": () => changeBackgroundImage("static/img/background.JPG")
             },
             {
                 "selector": "#watercolor",
-                "enter_event": () => changeBackgroundImage("bucket/watercolor-thumbnail.JPG"),
-                "leave_event": () => changeBackgroundImage("bucket/background.JPG")
+                "enter_event": () => changeBackgroundImage("static/img/watercolor-background.JPG"),
+                "leave_event": () => changeBackgroundImage("static/img/background.JPG")
             },
             {
                 "selector": "#ink",
-                "enter_event": () => changeBackgroundImage("bucket/ink-thumbnail.JPG"),
-                "leave_event": () => changeBackgroundImage("bucket/background.JPG")
+                "enter_event": () => changeBackgroundImage("static/img/ink-background.JPG"),
+                "leave_event": () => changeBackgroundImage("static/img/background.JPG")
             },
             {
                 "selector": "#sketchbook",
-                "enter_event": () => changeBackgroundImage("bucket/sketchbook-thumbnail.JPG"),
-                "leave_event": () => changeBackgroundImage("bucket/background.JPG")
+                "enter_event": () => changeBackgroundImage("static/img/sketchbook-background.JPG"),
+                "leave_event": () => changeBackgroundImage("static/img/background.JPG")
             }];
-rows = {
-            "selector": "div.row",
-            "leave_event": () => changeBackgroundImage("bucket/background.JPG")
+
+portfolio = {
+            "selector": "section.portfolio",
+            "leave_event": () => changeBackgroundImage("static/img/background.JPG")
         };
+
 posters.forEach(
     p => { 
         let el = document.querySelector(p.selector);
         el.addEventListener("mouseover", p.enter_event);
     }
 );
-document.querySelectorAll(rows.selector).forEach(
-    el => el.addEventListener("mouseleave", rows.leave_event)
-);
+
+document
+    .querySelector(portfolio.selector)
+    .addEventListener("mouseleave", portfolio.leave_event);
