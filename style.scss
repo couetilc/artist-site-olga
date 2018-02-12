@@ -1,3 +1,10 @@
+/*! 
+Theme Name: Olga Art Theme
+Author: Connor Couetil
+Description: Custom theme for Olga Anastasia Art
+Version: 0.0.1
+Tags: 
+*/
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 $poster-width: 160px;
@@ -16,7 +23,7 @@ html {
 
 body {
     @include biggest-box;
-    background-image: url("../../static/img/background.jpg");
+    background-image: url("img/background.jpg");
     background-attachment: fixed;
     background-size: cover;
     display: flex;

@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="static/css/main.css">
+        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/style.css">
     </head>
     <body>
         <div class="fading-bg">
@@ -55,36 +55,43 @@
         </nav>
 
         <section class="logo">
-            <img id="main-logo" src="static/img/logo-oneline-oaa_cloud.png">
+            <img id="main-logo" src="<?php echo get_bloginfo('template_directory'); ?>/img/logo-oneline-oaa_cloud.png">
         </section>
 
         <section class="portfolio">
             <a href="./mixedmedia/" class="noh">
                 <div class="poster" id="mixed-media">
                     <h2>Mixed Media</h2>
-                    <img src="static/img/mixed_media-thumbnail.jpg">
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/mixed_media-thumbnail.jpg">
                 </div>
             </a>
             <a href="./watercolor/" class="noh">
                 <div class="poster" id="watercolor">
                     <h2>Watercolor</h2>
-                    <img src="static/img/watercolor-thumbnail.jpg">
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/watercolor-thumbnail.jpg">
                 </div>
             </a>
             <a href="./ink/" class="noh">
                 <div class="poster" id="ink">
                     <h2>Ink</h2>
-                    <img src="static/img/ink-thumbnail.jpg">
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/ink-thumbnail.jpg">
                 </div>
             </a>
             <a href="./sketchbook/" class="noh">
                 <div class="poster" id="sketchbook">
                     <h2>Sketchbook</h2>
-                    <img src="static/img/sketchbook-thumbnail.jpg">
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/sketchbook-thumbnail.jpg">
                 </div>
             </a>
         </section>
 
-        <script src="static/js/main.js"></script>
+    <?php 
+        echo '<script> theme_dir = "' 
+            . get_bloginfo('stylesheet_directory') 
+            . '"; </script>';
+    ?>
+
+    <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/functions.js"></script>
+
     </body>
 </html>
