@@ -20,28 +20,28 @@ controls.forEach(svg => svg.addEventListener("click",
 
 posters =  [{ 
                 "selector": "#mixed-media",
-                "enter_event": () => changeBackgroundImage("static/img/mixed_media-background.JPG"),
-                "leave_event": () => changeBackgroundImage("static/img/background.JPG")
+                "enter_event": () => changeBackgroundImage("static/img/mixed_media-background.jpg"),
+                "leave_event": () => changeBackgroundImage("static/img/background.jpg")
             },
             {
                 "selector": "#watercolor",
-                "enter_event": () => changeBackgroundImage("static/img/watercolor-background.JPG"),
-                "leave_event": () => changeBackgroundImage("static/img/background.JPG")
+                "enter_event": () => changeBackgroundImage("static/img/watercolor-background.jpg"),
+                "leave_event": () => changeBackgroundImage("static/img/background.jpg")
             },
             {
                 "selector": "#ink",
-                "enter_event": () => changeBackgroundImage("static/img/ink-background.JPG"),
-                "leave_event": () => changeBackgroundImage("static/img/background.JPG")
+                "enter_event": () => changeBackgroundImage("static/img/ink-background.jpg"),
+                "leave_event": () => changeBackgroundImage("static/img/background.jpg")
             },
             {
                 "selector": "#sketchbook",
-                "enter_event": () => changeBackgroundImage("static/img/sketchbook-background.JPG"),
-                "leave_event": () => changeBackgroundImage("static/img/background.JPG")
+                "enter_event": () => changeBackgroundImage("static/img/sketchbook-background.jpg"),
+                "leave_event": () => changeBackgroundImage("static/img/background.jpg")
             }];
 
 portfolio = {
             "selector": "section.portfolio",
-            "leave_event": () => changeBackgroundImage("static/img/background.JPG")
+            "leave_event": () => changeBackgroundImage("static/img/background.jpg")
         };
 
 posters.forEach(

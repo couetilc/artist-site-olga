@@ -10,10 +10,9 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-image: url("../../bucket/background.JPG");
+  background-image: url("../../static/img/background.jpg");
   background-attachment: fixed;
   background-size: cover;
-  transition: .5s background-image ease-in-out;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -74,7 +73,7 @@ section.portfolio {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-flow: row wrap;
   font-family: 'Roboto', sans-serif;
